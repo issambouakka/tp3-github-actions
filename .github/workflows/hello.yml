@@ -33,8 +33,4 @@ jobs:
           echo "Commit : $GITHUB_SHA"
           echo "Evenement : $GITHUB_EVENT_NAME"
 
-      - name: Simuler une erreur
-        run: exit 1
-
-      - name: Etape apres erreur
-        run: echo "Cette etape ne sera pas executee"
+   
