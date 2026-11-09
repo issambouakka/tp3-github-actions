@@ -10,5 +10,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Recuperer le code
+        uses: actions/checkout@v4
+
       - name: Afficher un message
         run: echo "Hello from GitHub Actions"
+
+      - name: Informations du runner
+        run: |
+          echo "Version Python :"
+          python --version
+
+          echo "Repertoire courant :"
+          pwd
+
+          echo "Liste des fichiers :"
+          ls -la
+
+      - name: Informations Git
+        run: |
+          echo "Branche : $GITHUB_REF_NAME"
+          echo "Commit : $GITHUB_SHA"
+          echo "Evenement : $GITHUB_EVENT_NAME"
